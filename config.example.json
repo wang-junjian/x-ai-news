@@ -1,0 +1,6 @@
+{
+  "publish_token": "replace-with-a-long-random-token",
+  "site_name": "AI 新闻速读",
+  "base_url": "http://127.0.0.1:3000",
+  "sharecode": ""
+}

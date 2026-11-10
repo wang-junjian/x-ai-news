@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日要闻 · 2026.11.08 · 分类卡片</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#15181f; --sub:#5a626f; --line:#e7eaf0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;
+    padding:34px 20px 64px;
+  }
+  .wrap{max-width:1160px;margin:0 auto}
+  header{margin-bottom:14px;border-bottom:2px solid var(--ink);padding-bottom:18px}
+  .kicker{font-size:12px;font-weight:800;letter-spacing:3px;color:#8b93a1;text-transform:uppercase}
+  h1{font-size:32px;font-weight:900;margin:8px 0 6px;letter-spacing:-1px;line-height:1.1}
+  .date{font-size:14.5px;color:var(--sub);font-weight:500}
+  .date b{color:var(--ink)}
+  .phil{margin-top:12px;font-size:13px;color:var(--sub);line-height:1.55}
+  .phil b{color:#d64545}
+
+  .cat{margin-top:38px}
+  .cat-head{display:flex;align-items:baseline;gap:12px;padding-left:13px;border-left:6px solid var(--c)}
+  .cat-title{font-size:23px;font-weight:900;letter-spacing:-.4px;color:var(--c)}
+  .cat-count{font-size:12px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--c);
+             padding:3px 10px;border-radius:20px}
+  .cat-sub{font-size:12.5px;color:#9aa1ad;font-weight:600;margin-left:auto;align-self:center}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:16px}
+
+  .card{
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);
+    border-radius:14px;padding:16px 18px 16px;box-shadow:0 1px 2px rgba(20,30,50,.04);
+    transition:transform .16s ease,box-shadow .16s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,30,50,.12)}
+  .card:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+
+  .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+  .tag{font-size:11px;font-weight:800;letter-spacing:.5px;padding:3px 10px;border-radius:6px;
+       background:color-mix(in srgb,var(--c) 13%,#fff);color:var(--c)}
+  .src{font-size:11.5px;color:#9aa1ad;font-weight:600;white-space:nowrap}
+
+  .headline{font-size:19px;font-weight:900;line-height:1.36;letter-spacing:-.3px;color:var(--ink)}
+  .headline .em{color:var(--c)}
+
+  .one{font-size:13px;color:var(--sub);line-height:1.62;margin-top:8px;flex:1}
+
+  .hero{margin-top:12px;border-top:1px dashed var(--line);padding-top:11px;display:flex;flex-direction:column;gap:3px}
+  .hnum{font-size:30px;font-weight:900;letter-spacing:-1px;color:var(--c);line-height:1.04}
+  .hnum.txt{font-size:21px;letter-spacing:0}
+  .hlab{font-size:11.5px;color:var(--sub);font-weight:600}
+
+  .read{margin-top:11px;font-size:12px;font-weight:800;color:var(--c);letter-spacing:.3px}
+
+  footer{margin-top:40px;text-align:center;font-size:12px;color:#9aa1ad;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">AI Daily · 分类卡片</div>
+    <h1>AI 每日要闻 · 2026.11.08</h1>
+    <div class="date"><b>2026 年 11 月 8 日</b> · 周日 · 本周要闻精选（截至 11/8）</div>
+    <div class="phil">设计原则：<b>不堆图、不注水</b>。按类别归并，每类最多 6 张；颜色标类别、字号标主次、关键数字放大。单击任意卡片直达原文。</div>
+  </header>
+
+  <!-- ============ 1. 前沿模型 ============ -->
+  <section class="cat" style="--c:#5b5bd6">
+    <div class="cat-head">
+      <span class="cat-title">前沿模型</span>
+      <span class="cat-count">4 条</span>
+      <span class="cat-sub">capability &amp; cost compression</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://i.ifeng.com/c/8xp20MhJRdJ" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">前沿模型</span><span class="src">OpenAI · 11/5</span></div>
+        <div class="headline">GPT-6 Cyber：<span class="em">首个「关键级」安全模型</span></div>
+        <div class="one">专攻漏洞挖掘与利用验证；ExploitGym 48.5%，较上代 +51%；已协助在 Firefox 揪出 81 个未知高危漏洞，并为 Linux 内核 948 个漏洞写出可用利用程序。</div>
+        <div class="hero"><span class="hnum">48.5%</span><span class="hlab">ExploitGym · 越界率仅 0.07% · 限 Daybreak Red</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">前沿模型</span><span class="src">Google · 11/3</span></div>
+        <div class="headline">Gemini 4 Carbon <span class="em">登顶，却先给防御者</span></div>
+        <div class="one">人工智能分析指数 59 分排名第一；首发仅面向经甄别的网安防御者，能力按风险画像而非付费层级分配，开发者/企业访问尚待推出。</div>
+        <div class="hero"><span class="hnum">59 分</span><span class="hlab">AA Index 登顶 · 风险分级放出</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://thecontext.dev/en/briefing/2026-11-05" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">前沿模型</span><span class="src">Moonshot · 11/5</span></div>
+        <div class="headline">Kimi K3.1 Pro <span class="em">全量开源权重</span></div>
+        <div class="one">2.8 万亿参数 MoE、每 token 激活 104B、百万 token 上下文；Agent Arena 开源第一，维持全球参数规模最大开源模型纪录。</div>
+        <div class="hero"><span class="hnum">2.8T</span><span class="hlab">开放权重 · 104B 激活 · 百万上下文</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.163.com/dy/article/LAV8SDBP05118I96.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">前沿模型</span><span class="src">腾讯 · 11/4</span></div>
+        <div class="headline">混元 Hy4 <span class="em">发布即开源</span></div>
+        <div class="one">770B 参数，首次引入视觉理解与电脑操作（Computer Use）；官方称跻身最强开源模型行列，权重将近期开放。</div>
+        <div class="hero"><span class="hnum">770B</span><span class="hlab">发布即开源 · 视觉 + Computer Use</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 2. 国产开源 ============ -->
+  <section class="cat" style="--c:#0e8c7e">
+    <div class="cat-head">
+      <span class="cat-title">国产开源</span>
+      <span class="cat-count">4 条</span>
+      <span class="cat-sub">从"借船"到"造船"</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://news.cyol.com/gb/keji/articles/2026-11/06/content_3nXxvNTwy3.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">国产开源</span><span class="src">中青在线 · 11/6</span></div>
+        <div class="headline">乌镇峰会：<span class="em">中国开源大模型成全球引领</span></div>
+        <div class="one">国家级开源社区用户超 1100 万；过去一年中国模型占 Hugging Face 下载量 41%，累计破 100 亿次，多国媒体集中报道。</div>
+        <div class="hero"><span class="hnum">41%</span><span class="hlab">全球下载占比 · 累计破 100 亿次</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://finance.people.com.cn/BIG5/n1/2026/1105/c1004-40828406.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">国产开源</span><span class="src">人民网 · 11/5</span></div>
+        <div class="headline">DeepSeek <span class="em">全面开源推理框架</span></div>
+        <div class="one">将内部推理框架与编解码组件整体开源，把最底层能力交到全球开发者手中；国产开源正从"产品出海"走向"生态共建"。</div>
+        <div class="hero"><span class="hnum txt">底层开源</span><span class="hlab">推理框架 + 编解码 · 全球可复现</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.cinn.cn/yc/2026/11-05/eryjvwoD.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">国产开源</span><span class="src">中国工业新闻网 · 11/5</span></div>
+        <div class="headline">阿里亮成绩单：<span class="em">千问开源 470+ 模型</span></div>
+        <div class="one">蔡崇信乌镇披露：三年开源超 470 款模型，全球累计下载破 40 亿次、衍生模型超 33 万，稳居全球第一开源家族。</div>
+        <div class="hero"><span class="hnum">470+</span><span class="hlab">开源模型数 · 衍生超 33 万</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.163.com/news/article/LAVH635J0001A1UG.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">国产开源</span><span class="src">人民日报 · 11/5</span></div>
+        <div class="headline">封锁之下：<span class="em">英伟达要求 51% 算力留非中国</span></div>
+        <div class="one">外媒称英伟达施压数据中心伙伴将至少 51% 服务能力留给非中国企业；中国以开源开放回应"小院高墙"，让技术像水一样流动。</div>
+        <div class="hero"><span class="hnum">51%</span><span class="hlab">算力壁垒 · 倒逼开源路线</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 3. 市场资本 ============ -->
+  <section class="cat" style="--c:#c81e8c">
+    <div class="cat-head">
+      <span class="cat-title">市场资本</span>
+      <span class="cat-count">2 条</span>
+      <span class="cat-sub">钱往哪走</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://news.qq.com/rain/a/20261106A03M8T00" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">市场资本</span><span class="src">每经/腾讯 · 11/6</span></div>
+        <div class="headline">周四 AI 股灾：<span class="em">七巨头单日蒸发 $1T</span></div>
+        <div class="one">民主党中期选举大胜后，市场担忧数据中心建设放缓；纳指跌 5.5% 进入回调区间，为 19 个月最大单日跌幅，七巨头市值合计减 1 万亿美元。</div>
+        <div class="hero"><span class="hnum">−$1T</span><span class="hlab">七巨头单日蒸发 · 纳指 −5.5%</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://finance.sina.com.cn/roll/2026-11-07/doc-inixwhsh4924350.shtml" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">市场资本</span><span class="src">第一财经 · 11/7</span></div>
+        <div class="headline">周五反攻：<span class="em">AMD 大涨 11%</span></div>
+        <div class="one">逢低买盘涌入，费城半导体指数 +4.2%、纳指 +1.09%；AMD 涨超 11%，台积电、英特尔涨超 6%，光通信板块 Coherent 暴涨 13.6%。</div>
+        <div class="hero"><span class="hnum">+11%</span><span class="hlab">AMD · 半导体 +4.2% · 纳指 +1.09%</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. 智能体治理 ============ -->
+  <section class="cat" style="--c:#e07b39">
+    <div class="cat-head">
+      <span class="cat-title">智能体治理</span>
+      <span class="cat-count">3 条</span>
+      <span class="cat-sub">代理经济的规则墙</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://www.163.com/dy/article/LB4OC8H20552C2FY.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">智能体治理</span><span class="src">上证报 · 11/7</span></div>
+        <div class="headline">工信部 <span class="em">智能体终端进网新规落地</span></div>
+        <div class="one">首次将预置智能体的手机/平板/穿戴设备纳入进网监管：适配验证、涉诈评估、唯一身份码、OTA 前置报备，全链条可溯源可追责。</div>
+        <div class="hero"><span class="hnum txt">进网新规</span><span class="hlab">唯一身份码 · OTA 前置评估 · 可溯源</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://m.cnfin.com/yw-lb//zixun/20261104/4490877_1.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">智能体治理</span><span class="src">新华财经 · 11/4</span></div>
+        <div class="headline">乌镇峰会 <span class="em">发布《智能体发展自律公约》</span></div>
+        <div class="one">中国信通院联合华为、阿里、腾讯、小米等 20 家单位提出八条自律措施，聚焦信任体系、互联基础设施、互操作与安全防护。</div>
+        <div class="hero"><span class="hnum txt">20 家单位</span><span class="hlab">八条自律 · 互信互联互操作</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://infosecu.technews.tw/2026/10/30/new-york-bans-ai-chatbots-from-romantic-roleplay-with-children" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">智能体治理</span><span class="src">TechNews · 10/30</span></div>
+        <div class="headline">纽约州 <span class="em">严管儿童 AI 伴侣</span></div>
+        <div class="one">禁止 AI 假扮真人/情感伴侣，强制年龄验证；每次违规最高罚 2.5 万美元，被称"全美最强儿童 AI 安全法"。</div>
+        <div class="hero"><span class="hnum">$25,000</span><span class="hlab">每次违规 · 强制年龄验证</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 5. 工程范式 ============ -->
+  <section class="cat" style="--c:#2c6fbb">
+    <div class="cat-head">
+      <span class="cat-title">工程范式</span>
+      <span class="cat-count">2 条</span>
+      <span class="cat-sub">从"写代码"到"指挥系统"</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://glonce.com/digest/week?utm_source=openai" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">工程范式</span><span class="src">OpenAI · 11/5</span></div>
+        <div class="headline">Pando：<span class="em">为 Codex 重写的 Git 后端</span></div>
+        <div class="one">为应对 Codex 带来的并发洪流，OpenAI 自建 Git 后端，push 中位延迟降近 5 倍，现日均服务近 1PB Git 数据。</div>
+        <div class="hero"><span class="hnum">~5×</span><span class="hlab">push 延迟降幅 · 近 1PB/日</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.upnorth.ai/en/news/2026-11-02" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">工程范式</span><span class="src">Up North · 11/2</span></div>
+        <div class="headline">多智能体编排 <span class="em">成默认开发工作流</span></div>
+        <div class="one">Claude Code 子智能体/Task 成参考范式；LangGraph、BullMQ、MCP 把多模型缝成智能体团队，复杂任务吞吐 3–5×。</div>
+        <div class="hero"><span class="hnum">3–5×</span><span class="hlab">复杂任务吞吐 · 编排层成新杠杆</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 6. 具身硬件 ============ -->
+  <section class="cat" style="--c:#1f9e6b">
+    <div class="cat-head">
+      <span class="cat-title">具身硬件</span>
+      <span class="cat-count">3 条</span>
+      <span class="cat-sub">AI 走进真实物理世界</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://www.ciie.org/zbh/cn/2024/medium-item1/other/20261107/65762.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">具身硬件</span><span class="src">经济日报/进博会 · 11/7</span></div>
+        <div class="headline">进博会：<span class="em">人形机器人 0.3 秒自主对打乒乓球</span></div>
+        <div class="one">无遥控无脚本，约 0.3 秒内完成感知—预测—决策—挥拍闭环；相机每 5ms 刷新，考验实时自主决策与连续失败恢复。</div>
+        <div class="hero"><span class="hnum">0.3 秒</span><span class="hlab">感知到挥拍闭环 · 5ms 相机刷新</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.cnr.cn/tech/techxp/20261106/t20261106_527863991.shtml" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">具身硬件</span><span class="src">央广网 · 11/6</span></div>
+        <div class="headline">具身智能 <span class="em">从"秀表演"到"秀服务"</span></div>
+        <div class="one">机器人现场拍照递照片、冲泡功夫茶、担任酒店管家；不再只跳舞打拳，而是理解与操作真实工具，误差控制在 2mm 内。</div>
+        <div class="hero"><span class="hnum txt">开始干活</span><span class="hlab">拍照/泡茶/管家 · 操作误差 ≤2mm</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+      <a class="card" href="https://www.163.com/dy/article/LB2UHOL0051492T3.html" target="_blank" rel="noopener">
+        <div class="row"><span class="tag">具身硬件</span><span class="src">网易/红星 · 11/6</span></div>
+        <div class="headline">高通 <span class="em">6G 终端原型机全球首展</span></div>
+        <div class="one">首个符合 3GPP 最新定义的 6G 终端走出实验室；实测下行带宽 400MHz（5G 时期 100MHz），已与中兴等联调。</div>
+        <div class="hero"><span class="hnum">400MHz</span><span class="hlab">6G 下行带宽 · 全球首展</span></div>
+        <div class="read">阅读原文 ↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    AI 每日要闻 · 分类卡片（6 类 · 18 条）— 数据来源于公开报道，整理截至 2026-11-08。<br>
+    少即是多，浓缩的是精华：颜色标类别，字号标主次，关键数字放大，单击卡片直达原文。
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+{
+ "date": "2026-11-09",
+ "title": "AI 每日要闻 · 2026.11.09",
+ "date_label": "2026 年 11 月 9 日",
+ "weekday": "周一",
+ "subtitle": "2026 年 11 月 9 日 · 周一 · 本周要闻精选（截至 11/9）",
+ "philosophy": "设计原则：不堆图、不注水。按类别归并，每类最多 6 张；颜色标类别、字号标主次、关键数字放大。单击任意卡片直达原文。",
+ "kicker": "AI Daily · 分类卡片",
+ "total": 21,
+ "cat_count": 6,
+ "cats": [
+  {
+   "name": "前沿模型",
+   "color": "#5b5bd6",
+   "sub": "capability & efficiency",
+   "count": "5 条",
+   "cards": [
+    {
+     "url": "https://mistral.ai/news/mistral-large-4-oss",
+     "tag": "前沿模型",
+     "src": "Mistral · 11/9",
+     "headline": "Mistral Large 4「Le Chonk」权重全开放",
+     "ems": [
+      "权重全开放"
+     ],
+     "one": "欧洲训练的原生多模态 MoE，约 1T 参数；再练三周 RL，编码与防御安全登顶开放权重，输出却少 30% token。",
+     "hnum": "1T",
+     "hlab": "Terminal-Bench 41% · 少吐 30% token"
+    },
+    {
+     "url": "https://devpress.csdn.net/aibjcy/6aefd6d040858c2d88193144.html",
+     "tag": "前沿模型",
+     "src": "蚂蚁 / 简单快 · 11/8",
+     "headline": "蚂蚁百灵 Ling-3.2-flash：会\"做错了就停\"",
+     "ems": [
+      "会\"做错了就停\""
+     ],
+     "one": "560B 原生多模态，主打视觉反馈自检与异常恢复；官方称图文/视觉推理/文档解析三项基准超 Claude Opus 5，上线两周免费。",
+     "hnum": "560B",
+     "hlab": "视觉自检 · 异常即停"
+    },
+    {
+     "url": "https://devpress.csdn.net/aibjcy/6aefd6d040858c2d88193144.html",
+     "tag": "前沿模型",
+     "src": "阿里 · 11/8",
+     "headline": "阿里开源 Qwen3.8 全系，旗舰 2.4T",
+     "ems": [
+      "旗舰 2.4T"
+     ],
+     "one": "旗舰版 2.4 万亿参数，另推 27B 多模态主力与 Flash 轻量版；Qwen3.8-Max 在 Text Arena 全球第五、CodeArena 登顶。",
+     "hnum": "2.4T",
+     "hlab": "CodeArena 登顶 · 27B 多模态"
+    },
+    {
+     "url": "https://devpress.csdn.net/aibjcy/6aefd6d040858c2d88193144.html",
+     "tag": "前沿模型",
+     "src": "百度 · 11/8",
+     "headline": "百度开源 ERNIE 5.5 Flash Base",
+     "ems": [
+      "ERNIE 5.5 Flash Base"
+     ],
+     "one": "稀疏 MoE，总参 280B、每 token 激活 14B，基于 33.5T tokens 从零预训练；训练 128K、推理支持 1M，FP8/BF16 已上 HF。",
+     "hnum": "280B",
+     "hlab": "33.5T 训练 · 推理 1M"
+    },
+    {
+     "url": "https://www.peopleapp.com/rmharticle/30053096976",
+     "tag": "前沿模型",
+     "src": "人民日报 / Nature · 11/9",
+     "headline": "DeepMind WeatherNext：飓风预警多一天",
+     "ems": [
+      "飓风预警多一天"
+     ],
+     "one": "Nature 论文，热带气旋路径/强度/风结构预报平均提前 24 小时；仅用 28km 粗网格，权重已开源，单 TPU 跑 15 天轨迹不到 1 分钟。",
+     "hnum": "+24h",
+     "hlab": "28km 粗网格 · 已开源"
+    }
+   ]
+  },
+  {
+   "name": "国产开源",
+   "color": "#0e8c7e",
+   "sub": "从\"借船\"到\"造船\"",
+   "count": "4 条",
+   "cards": [
+    {
+     "url": "https://www.163.com/dy/article/LB093O5G0514R9P4.html",
+     "tag": "国产开源",
+     "src": "月之暗面 · 11/5",
+     "headline": "Kimi K3.1 Pro 全量开源权重",
+     "ems": [
+      "全量开源权重"
+     ],
+     "one": "2.8T MoE、激活 1040 亿、百万 token 上下文；Agent Arena 开放权重第一、全球第 13，Bash 可靠性 +7.9% 居开放模型之首。",
+     "hnum": "2.8T",
+     "hlab": "Agent Arena 开源第一"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LAV8SDBP05118I96.html",
+     "tag": "国产开源",
+     "src": "腾讯 · 11/4",
+     "headline": "腾讯混元 Hy4 发布即开源",
+     "ems": [
+      "发布即开源"
+     ],
+     "one": "770B 参数，首引入视觉理解与电脑操作（Computer Use）；官方称跻身最强开源行列，权重近期开放，调用激增已十倍扩容。",
+     "hnum": "770B",
+     "hlab": "视觉 + Computer Use"
+    },
+    {
+     "url": "https://www.tmtpost.com/nictation/8189224.html",
+     "tag": "国产开源",
+     "src": "赛迪 / 央视 · 11/1",
+     "headline": "中国 AI 推理量 首超训练量",
+     "ems": [
+      "首超训练量"
+     ],
+     "one": "截至 6 月日均词元调用超 175 万亿、较 2024 年初增 1000 多倍；智能体开始\"进终端上岗\"，标志从\"喂模型\"转入\"用模型\"。",
+     "hnum": "175 万亿",
+     "hlab": "日均 token · 增 1000×"
+    },
+    {
+     "url": "https://jiandankuai.com/",
+     "tag": "国产开源",
+     "src": "简单快 · 11/8",
+     "headline": "DeepSeek Harness 日活 154 万",
+     "ems": [
+      "日活 154 万"
+     ],
+     "one": "开源智能体框架日均消耗 92 万亿 token，第三方插件 3.5 万个，官方应用市场在筹备——开源智能体生态真正跑起来了。",
+     "hnum": "154 万",
+     "hlab": "日均 92 万亿 token · 插件 3.5 万"
+    }
+   ]
+  },
+  {
+   "name": "市场资本",
+   "color": "#c81e8c",
+   "sub": "钱往哪走",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+     "tag": "市场资本",
+     "src": "TechCrunch · 11/6–8",
+     "headline": "OpenAI 募 110 亿美元，估值 1.25 万亿",
+     "ems": [
+      "110 亿美元"
+     ],
+     "one": "本轮仍在推进、或达 200 亿；但远低于 9 月传出的 300 亿目标，IPO 推迟至明年；同业 Anthropic 估值预期从 2 万亿腰斩。",
+     "hnum": "$11B",
+     "hlab": "估值 $1.25T · 低于 300 亿目标"
+    },
+    {
+     "url": "https://www.readaboutai.com/November-8-2026",
+     "tag": "市场资本",
+     "src": "ReadAboutAI · 11/8",
+     "headline": "地方数据中心公投 几乎全否",
+     "ems": [
+      "几乎全否"
+     ],
+     "one": "中期选举约 40 项地方数据中心议案仅 1 项通过；选民抵触噪声、耗水与就业落空，算力基建审批将更慢更贵。",
+     "hnum": "40 中 39 败",
+     "hlab": "算力基建放缓 · 成本上行"
+    },
+    {
+     "url": "https://news.qq.com/rain/a/20261106A03M8T00",
+     "tag": "市场资本",
+     "src": "每经 / 腾讯 · 11/6–7",
+     "headline": "AI 股灾与反弹：七巨头 −$1T",
+     "ems": [
+      "七巨头 −$1T"
+     ],
+     "one": "民主党中期选举大胜引发担忧，纳指单日 −5.5% 创 19 月最大跌幅；次日逢低买盘涌入，AMD 反弹 +11%、半导体 +4.2%。",
+     "hnum": "−$1T",
+     "hlab": "纳指 −5.5% → AMD +11%"
+    }
+   ]
+  },
+  {
+   "name": "智能体治理",
+   "color": "#e07b39",
+   "sub": "代理经济的规则墙",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://www.miit.gov.cn/zwgk/zcjd/art/2026/art_7ebf90533ca74af78542c70d3adaabb9.html",
+     "tag": "智能体治理",
+     "src": "工信部 · 11/6",
+     "headline": "工信部 智能体终端进网新规",
+     "ems": [
+      "智能体终端进网新规"
+     ],
+     "one": "手机/平板/穿戴预置智能体纳入进网监管：适配验证、涉诈评估、唯一身份码、OTA 前置报备，全链条可溯源可追责。",
+     "hnum": "进网新规",
+     "hlab": "唯一身份码 · OTA 前置 · 可溯源"
+    },
+    {
+     "url": "https://m.cnfin.com/yw-lb//zixun/20261104/4490877_1.html",
+     "tag": "智能体治理",
+     "src": "新华财经 · 11/4",
+     "headline": "乌镇峰会 《智能体发展自律公约》",
+     "ems": [
+      "《智能体发展自律公约》"
+     ],
+     "one": "中国信通院联合华为、阿里、腾讯、小米等 20 家单位提出八条自律，聚焦信任体系、互联基础设施与安全防护。",
+     "hnum": "20 家单位",
+     "hlab": "八条自律 · 互信互联互操作"
+    },
+    {
+     "url": "https://jiandankuai.com/",
+     "tag": "智能体治理",
+     "src": "简单快 · 11/8",
+     "headline": "Visa 让 22 个 AI 代购，42.8% 翻车",
+     "ems": [
+      "42.8% 翻车"
+     ],
+     "one": "AI 替用户买东西的实测中四成没通过，其中 54% 的失败案例照样下了单——自主交易的信任与止损机制仍是硬伤。",
+     "hnum": "42.8%",
+     "hlab": "失败仍下单 · 信任危机"
+    }
+   ]
+  },
+  {
+   "name": "工程范式",
+   "color": "#2c6fbb",
+   "sub": "从\"写代码\"到\"指挥系统\"",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://code.claude.com/docs/en/changelog",
+     "tag": "工程范式",
+     "src": "Anthropic · 11/6",
+     "headline": "Claude Code 后台化 MCP 任务",
+     "ems": [
+      "后台化 MCP 任务"
+     ],
+     "one": "2.1.319 将 MCP 工具调用立即转后台、完成再回报；新增 denyInsteadOfPrompting，无人值守的智能体运行不再卡在权限弹窗。",
+     "hnum": "2.1.319",
+     "hlab": "MCP 后台 · 无头运行"
+    },
+    {
+     "url": "https://aitoolsrecap.com/Blog/ai-news-november-08-2026",
+     "tag": "工程范式",
+     "src": "Google · 11/7",
+     "headline": "Google A2A 协议转正（ADK 2.14）",
+     "ems": [
+      "A2A 协议转正"
+     ],
+     "one": "Agent-to-Agent 通信、执行环境与核心运行时在 ADK 2.14 移至 stable；智能体互联有了首个长生命周期的官方基线。",
+     "hnum": "ADK 2.14",
+     "hlab": "A2A 转 stable"
+    },
+    {
+     "url": "https://www.deai.org/news/xai-grok-api-default-watermarking",
+     "tag": "工程范式",
+     "src": "DeAI · 11/7",
+     "headline": "xAI 全 API 默认加水印",
+     "ems": [
+      "全 API 默认加水印"
+     ],
+     "one": "7 款 Grok 模型文本输出默认隐形统计水印，呼应欧盟《人工智能法》12/2 大限；仅团队管理员可按模型退出并自负披露责任。",
+     "hnum": "7 款 Grok",
+     "hlab": "EU AI Act · 默认开启"
+    }
+   ]
+  },
+  {
+   "name": "具身硬件",
+   "color": "#1f9e6b",
+   "sub": "AI 走进真实物理世界",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://www.ciie.org/zbh/cn/2024/medium-item1/other/20261107/65762.html",
+     "tag": "具身硬件",
+     "src": "经济日报 / 进博 · 11/7",
+     "headline": "进博会：人形机器人 0.3 秒对打",
+     "ems": [
+      "人形机器人 0.3 秒对打"
+     ],
+     "one": "无遥控无脚本，约 0.3 秒完成感知—预测—决策—挥拍闭环；相机每 5ms 刷新，考验实时自主决策与连续失败恢复。",
+     "hnum": "0.3 秒",
+     "hlab": "感知到挥拍闭环 · 5ms 刷新"
+    },
+    {
+     "url": "https://www.cnr.cn/tech/techxp/20261106/t20261106_527863991.shtml",
+     "tag": "具身硬件",
+     "src": "央广网 · 11/6",
+     "headline": "具身智能 从\"秀表演\"到\"秀服务\"",
+     "ems": [
+      "从\"秀表演\"到\"秀服务\""
+     ],
+     "one": "机器人现场拍照递照片、冲泡功夫茶、担任酒店管家；不再只跳舞打拳，而是理解并操作真实工具，误差控制在 2mm 内。",
+     "hnum": "开始干活",
+     "hlab": "拍照/泡茶/管家 · 误差 ≤2mm"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LB2UHOL0051492T3.html",
+     "tag": "具身硬件",
+     "src": "网易 / 红星 · 11/6",
+     "headline": "高通 6G 终端原型机首展",
+     "ems": [
+      "6G 终端原型机首展"
+     ],
+     "one": "首个符合 3GPP 最新定义的 6G 终端走出实验室；实测下行带宽 400MHz（5G 时期 100MHz），已与中兴等联调。",
+     "hnum": "400MHz",
+     "hlab": "6G 下行带宽 · 全球首展"
+    }
+   ]
+  }
+ ],
+ "footer_declared": 21,
+ "updated_at": "2026-11-09T23:36:38+08:00"
+}

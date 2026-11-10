@@ -1,0 +1,14 @@
+# Local secrets and deployment config -- never commit
+config.json
+
+# WorkBuddy workspace metadata (may contain app ids, share codes, local paths)
+.workbuddy/
+*.genie
+
+# Python / editor / OS noise
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+*.tmp

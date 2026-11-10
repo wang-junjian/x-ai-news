@@ -1,0 +1,255 @@
+{
+ "date": "2026-11-07",
+ "title": "AI 每日要闻 · 2026.11.07",
+ "date_label": "2026 年 11 月 7 日",
+ "weekday": "周六",
+ "subtitle": "2026 年 11 月 7 日 · 周六 · 少即是多，浓缩的是精华",
+ "philosophy": "设计原则：不堆图、不注水。按类别归并，每类最多 6 张；颜色标类别、字号标主次、关键数字放大。单击任意卡片直达原文。",
+ "kicker": "AI Daily · 分类卡片",
+ "total": 16,
+ "cat_count": 6,
+ "cats": [
+  {
+   "name": "前沿模型",
+   "color": "#5b5bd6",
+   "sub": "capability & cost compression",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+     "tag": "前沿模型",
+     "src": "OpenAI · 10/26",
+     "headline": "GPT-6.1 Terra：电脑操作能力降到平价",
+     "ems": [
+      "电脑操作能力降到平价"
+     ],
+     "one": "视觉推理 + 电脑操作专用模型，API 价 $1/$5 每百万 token，约为上代的 1/2~1/10；\"智能体干活\"走向规模化。",
+     "hnum": "$1 / $5",
+     "hlab": "每百万 token · 价格约为上代 1/2~1/10"
+    },
+    {
+     "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+     "tag": "前沿模型",
+     "src": "Google · 10/28",
+     "headline": "Gemini 4 Carbon 登顶，却先给网络防御者",
+     "ems": [
+      "登顶，却先给网络防御者"
+     ],
+     "one": "人工智能分析指数 59 分排名第一；首发仅面向经甄别的网安防御者，能力按风险画像而非付费层级分配。",
+     "hnum": "59 分",
+     "hlab": "指数登顶 · 风险分级放出"
+    },
+    {
+     "url": "https://www.upnorth.ai/en/news/2026-11-02",
+     "tag": "前沿模型",
+     "src": "Up North · 11/2",
+     "headline": "Mistral Large 4「Le Chonk」1T 参数开放权重",
+     "ems": [
+      "1T 参数开放权重"
+     ],
+     "one": "万亿参数 MoE、每 token 激活 49B；领跑开放智能体编程基准，欧洲最强开放模型登场。",
+     "hnum": "1T MoE",
+     "hlab": "49B 激活 · 开放权重"
+    }
+   ]
+  },
+  {
+   "name": "国产开源",
+   "color": "#0e8c7e",
+   "sub": "从\"借船\"到\"造船\"",
+   "count": "4 条",
+   "cards": [
+    {
+     "url": "https://en.ce.cn/main/latest/202611/t20261107_3286764.shtml",
+     "tag": "国产开源",
+     "src": "中国经济网 · 11/7",
+     "headline": "乌镇峰会：中国开源大模型成全球引领",
+     "ems": [
+      "中国开源大模型成全球引领"
+     ],
+     "one": "国家级开源社区用户超 1100 万；过去一年中国模型占 Hugging Face 下载量 41%，累计破 100 亿次。",
+     "hnum": "41%",
+     "hlab": "全球下载占比 · 累计破 100 亿次"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LAV8SDBP05118I96.html",
+     "tag": "国产开源",
+     "src": "网易/第一财经 · 11/4",
+     "headline": "腾讯混元 Hy4 发布即开源",
+     "ems": [
+      "发布即开源"
+     ],
+     "one": "770B 参数，首次引入视觉理解与电脑操作；官方称跻身最强开源模型行列，权重将近期开放。",
+     "hnum": "770B",
+     "hlab": "发布即开源 · 视觉 + Computer Use"
+    },
+    {
+     "url": "https://thecontext.dev/en/briefing/2026-11-05",
+     "tag": "国产开源",
+     "src": "The Context · 11/5",
+     "headline": "月之暗面 开放 Kimi K3.1 Pro 全量权重",
+     "ems": [
+      "开放 Kimi K3.1 Pro 全量权重"
+     ],
+     "one": "2.8 万亿参数 MoE、百万 token 上下文，保持全球参数规模最大开源模型纪录；Agent Arena 开源第一。",
+     "hnum": "2.8T",
+     "hlab": "全球最大开源 · 104B 激活"
+    },
+    {
+     "url": "https://devpress.csdn.net/aibjcy/6aee7694e5f4ca4eff8efbe6.html",
+     "tag": "国产开源",
+     "src": "CSDN 日报 · 11/7",
+     "headline": "百度 开源文心 ERNIE 5.5 Flash Base",
+     "ems": [
+      "开源文心 ERNIE 5.5 Flash Base"
+     ],
+     "one": "280B 稀疏 MoE、每 token 激活 14B，基于 33.5T tokens 从零预训练；FP8/BF16 权重已上架 Hugging Face。",
+     "hnum": "280B",
+     "hlab": "MoE 开源 · 训练 33.5T tokens"
+    }
+   ]
+  },
+  {
+   "name": "市场资本",
+   "color": "#c81e8c",
+   "sub": "钱往哪走",
+   "count": "2 条",
+   "cards": [
+    {
+     "url": "https://www.cnstock.com/commonDetail/816272",
+     "tag": "市场资本",
+     "src": "中国证券网 · 11/1",
+     "headline": "Anthropic 冲刺 IPO，代码 ANT",
+     "ems": [
+      "代码 ANT"
+     ],
+     "one": "递交 S-1 拟 11 月中旬登陆纳斯达克；上半年营收 162.86 亿美元、同比约 +13 倍，估值预期 1.5–2 万亿美元。",
+     "hnum": "$162.86亿",
+     "hlab": "上半年营收 · 同比约 +13×"
+    },
+    {
+     "url": "https://www.morningstar.com/stocks/alphabet-stock-sank-after-earnings-heres-what-investors-may-be-missing",
+     "tag": "市场资本",
+     "src": "Morningstar · 11/2",
+     "headline": "Alphabet 财报日跌 12.6%，AI 变现承压",
+     "ems": [
+      "AI 变现承压"
+     ],
+     "one": "搜索广告增速降至 12%、AI Mode 变现更低；单日市值蒸发约 5000 亿美元，创史上最大单日跌幅。",
+     "hnum": "−12.6%",
+     "hlab": "单日蒸发约 $5000亿 · 创纪录"
+    }
+   ]
+  },
+  {
+   "name": "智能体治理",
+   "color": "#e07b39",
+   "sub": "代理经济的规则墙",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-banks-block-personal-ai-agents-20261102-cs",
+     "tag": "智能体治理",
+     "src": "云安全联盟 · 11/2",
+     "headline": "美加 多家大行屏蔽第三方 AI 智能体",
+     "ems": [
+      "多家大行屏蔽第三方 AI 智能体"
+     ],
+     "one": "摩根大通、花旗、美银、RBC 等限制智能体以客户密码登录；争议核心是\"谁为智能体误操作买单\"。",
+     "hnum": "7+ 家",
+     "hlab": "银行封禁/限制 · 责任边界之争"
+    },
+    {
+     "url": "https://infosecu.technews.tw/2026/10/30/new-york-bans-ai-chatbots-from-romantic-roleplay-with-children",
+     "tag": "智能体治理",
+     "src": "TechNews · 10/30",
+     "headline": "纽约州 严管儿童 AI 伴侣",
+     "ems": [
+      "严管儿童 AI 伴侣"
+     ],
+     "one": "禁止 AI 假扮真人/情感伴侣，强制年龄验证；每次违规最高罚 2.5 万美元，被称\"全美最强儿童 AI 安全法\"。",
+     "hnum": "$25,000",
+     "hlab": "每次违规 · 强制年龄验证"
+    },
+    {
+     "url": "https://wap.cj.sina.cn/pc/7x24/5165303",
+     "tag": "智能体治理",
+     "src": "新浪财经 · 10/23",
+     "headline": "得州 起诉 OpenAI 与 Altman",
+     "ems": [
+      "起诉 OpenAI 与 Altman"
+     ],
+     "one": "指其将 ChatGPT 营销为安全工具却未充分保护用户（含儿童）；求每项违规 1 万美元罚款与禁令。",
+     "hnum": "诉讼",
+     "hlab": "儿童安全 · DTPA 消费者保护"
+    }
+   ]
+  },
+  {
+   "name": "工程范式",
+   "color": "#2c6fbb",
+   "sub": "从\"写代码\"到\"指挥系统\"",
+   "count": "2 条",
+   "cards": [
+    {
+     "url": "https://www.upnorth.ai/en/news/2026-11-02",
+     "tag": "工程范式",
+     "src": "Up North · 11/2",
+     "headline": "多智能体编排 成默认开发工作流",
+     "ems": [
+      "成默认开发工作流"
+     ],
+     "one": "Claude Code 子智能体/Task 成参考范式；LangGraph、BullMQ、MCP 把多模型缝成智能体团队，复杂任务吞吐 3–5×。",
+     "hnum": "3–5×",
+     "hlab": "复杂任务吞吐 · 编排层成新杠杆"
+    },
+    {
+     "url": "https://thecontext.dev/en/briefing/2026-11-05",
+     "tag": "工程范式",
+     "src": "The Context · 11/5",
+     "headline": "Anthropic FlashProve：给模型响应发\"身份证\"",
+     "ems": [
+      "给模型响应发\"身份证\""
+     ],
+     "one": "用 zkSNARK 密码学证明\"这条回复来自哪个模型\"，约 110 tok/s、70–95× 开销；开源权重可重算验证。",
+     "hnum": "~110 tok/s",
+     "hlab": "zkSNARK · 模型身份证明"
+    }
+   ]
+  },
+  {
+   "name": "具身硬件",
+   "color": "#1f9e6b",
+   "sub": "AI 走进真实物理世界",
+   "count": "2 条",
+   "cards": [
+    {
+     "url": "https://finance.people.com.cn/BIG5/n1/2026/1107/c1004-40829508.html",
+     "tag": "具身硬件",
+     "src": "人民网 · 11/7",
+     "headline": "进博会：人形机器人 0.3 秒自主对打乒乓球",
+     "ems": [
+      "人形机器人 0.3 秒自主对打乒乓球"
+     ],
+     "one": "无遥控无脚本，约 0.3 秒内完成感知—预测—决策—挥拍闭环；相机每 5ms 刷新，考验实时自主决策。",
+     "hnum": "0.3 秒",
+     "hlab": "感知到挥拍闭环 · 实时自主"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LB2UHOL0051492T3.html",
+     "tag": "具身硬件",
+     "src": "网易/红星 · 11/6",
+     "headline": "高通 6G 终端原型机全球首展",
+     "ems": [
+      "6G 终端原型机全球首展"
+     ],
+     "one": "首个符合 3GPP 最新定义的 6G 终端走出实验室；实测下行带宽 400MHz（5G 时期 100MHz），已与中兴等联调。",
+     "hnum": "400MHz",
+     "hlab": "6G 下行带宽 · 全球首展"
+    }
+   ]
+  }
+ ],
+ "footer_declared": 16,
+ "updated_at": "2026-11-09T23:28:12+08:00"
+}
