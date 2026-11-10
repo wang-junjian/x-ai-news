@@ -9,6 +9,8 @@ Usage
 
 The local data/ directory is the authoritative copy: it is always updated
 even when the remote publish fails, so a redeploy can restore all history.
+Cards already published in an earlier issue are filtered out both locally
+and remotely; the raw HTML archive is kept verbatim.
 """
 
 import argparse
@@ -24,6 +26,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 
 import server  # noqa: E402  (reuses its atomic store + parser)
+import dedupe  # noqa: E402
 from daily_parser import parse_daily, valid_date  # noqa: E402
 
 CONFIG = server.load_config()
@@ -52,6 +55,7 @@ def write_local(date, source):
     document = parse_daily(source, date, updated_at=server.now_iso())
     if not document["total"]:
         raise ValueError("解析到 0 张卡片，拒绝写入")
+    document = dedupe.filter_document(document, server.history_documents(date))
     server.save_day(date, source, document)
     return document
 
@@ -133,7 +137,8 @@ def main():
     except Exception as exc:
         print("[error] 本地写入失败: %s" % exc, file=sys.stderr)
         return 3
-    print("[local] %s 已归档 %d 条 / %d 类" % (date, document["total"], document["cat_count"]))
+    print("[local] %s 已归档 %d 条 / %d 类（过滤 %d 条往期重复）"
+          % (date, document["total"], document["cat_count"], document["dedupe"]["removed"]))
 
     if args.local_only:
         return 0
@@ -146,8 +151,9 @@ def main():
     except Exception as exc:
         print("[error] 线上推送失败: %s" % exc, file=sys.stderr)
         return 4
-    print("[online] %s %s 条 · 共 %s 期 · %s"
-          % (date, result.get("total"), result.get("total_days"), args.url))
+    print("[online] %s %s 条 · 共 %s 期 · 去重 %s 条 · %s"
+          % (date, result.get("total"), result.get("total_days"),
+             result.get("removed", 0), args.url))
     return 0
 
 

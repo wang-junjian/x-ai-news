@@ -251,5 +251,13 @@
   }
  ],
  "footer_declared": 16,
- "updated_at": "2026-11-09T23:28:12+08:00"
+ "updated_at": "2026-11-09T23:28:12+08:00",
+ "dedupe": {
+  "enabled": true,
+  "removed": 0,
+  "threshold": 0.6,
+  "history_days": [],
+  "items": [],
+  "at": "2026-11-10T17:25:26+08:00"
+ }
 }

@@ -214,6 +214,8 @@
 
   function render(){
     var visible=state.flat.filter(matches),lastMonth='',parts=[];
+    var removed=state.days.reduce(function(n,d){return n+((d.dedupe&&d.dedupe.removed)||0)},0);
+    var latestDay=state.days.filter(function(d){return d.total>0})[0]||state.days[0];
     state.days.forEach(function(day,idx){
       var items=visible.filter(function(i){return i.date===day.date});
       if(!items.length) return;
@@ -224,7 +226,8 @@
         '<div class="day-head"><span class="day-date">'+esc(mdLabel(day.date))+
         (day.weekday?'<span class="wd">'+esc(day.weekday)+'</span>':'')+'</span>'+
         '<span class="day-sub">'+(idx===0?'<span class="latest">最新</span>':'')+
-        esc(items.length)+' 条 · '+esc(day.cat_count)+' 类</span>'+
+        esc(items.length)+' 条 · '+esc(day.cat_count)+' 类'+
+        (day.dedupe&&day.dedupe.removed?' · 已去重 '+esc(day.dedupe.removed):'')+'</span>'+
         '<a class="raw-link" href="'+esc(withShare('/d/'+day.date+'.html'))+'" target="_blank" rel="noopener">查看原始版式 ↗</a></div>'+
         '<div class="grid">'+items.map(cardHtml).join('')+'</div></section>');
     });
@@ -237,7 +240,9 @@
     var scope=state.q||state.cat;
     notice.innerHTML=scope
       ? '筛选结果：<b>'+esc(visible.length)+'</b> 条 / 共 '+state.flat.length+' 条'+(state.q?' · 关键词「'+esc(state.q)+'」':'')+(state.cat?' · 分类「'+esc(state.cat)+'」':'')
-      : '共 <b>'+state.totalDays+'</b> 期 · <b>'+state.flat.length+'</b> 条快讯，最新一期 '+esc(mdLabel(state.days[0].date))+'。按时间线连续浏览，或用上方搜索与分类筛选。';
+      : '共 <b>'+state.totalDays+'</b> 期 · <b>'+state.flat.length+'</b> 条快讯'+
+        (removed?' · 已过滤 <b>'+removed+'</b> 条往期重复':'')+
+        '，最新一期 '+esc(mdLabel(latestDay.date))+'。按时间线连续浏览，或用上方搜索与分类筛选。';
     more.hidden=!scope && state.totalDays>state.limit ? false : true;
     more.textContent='加载更早的新闻（还有 '+(state.totalDays-state.limit)+' 期）';
   }

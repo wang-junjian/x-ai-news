@@ -5,8 +5,8 @@
    "title": "AI 每日要闻 · 2026.11.10",
    "date_label": "2026 年 11 月 10 日",
    "weekday": "周二",
-   "total": 18,
-   "cat_count": 6,
+   "total": 8,
+   "cat_count": 5,
    "updated_at": "2026-11-10T14:10:59+08:00"
   },
   {
@@ -14,8 +14,8 @@
    "title": "AI 每日要闻 · 2026.11.09",
    "date_label": "2026 年 11 月 9 日",
    "weekday": "周一",
-   "total": 21,
-   "cat_count": 6,
+   "total": 14,
+   "cat_count": 5,
    "updated_at": "2026-11-09T23:36:38+08:00"
   },
   {
@@ -23,7 +23,7 @@
    "title": "AI 每日要闻 · 2026.11.08",
    "date_label": "2026 年 11 月 8 日",
    "weekday": "周日",
-   "total": 18,
+   "total": 10,
    "cat_count": 6,
    "updated_at": "2026-11-09T23:37:22+08:00"
   },
@@ -37,5 +37,5 @@
    "updated_at": "2026-11-09T23:28:12+08:00"
   }
  ],
- "updated_at": "2026-11-10T14:10:59+08:00"
+ "updated_at": "2026-11-10T17:25:26+08:00"
 }

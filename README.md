@@ -61,6 +61,30 @@ AINEWS_URL=http://127.0.0.1:3000 python3 push.py file.html      # 本地联调
 
 `push.py` 先写本地再推线上：即使线上失败，本地历史仍完整，重新部署即可恢复。解析到 0 张卡片时会拒绝写入，避免覆盖已有数据。
 
+### 跨期去重
+
+每日 HTML 常会带上往期已经发布过的新闻。发布链路会自动过滤，**只保留首次发布的那一条**。
+
+判定规则（`dedupe.py`，纯标准库）：
+
+1. 标题归一化（NFKC、去标点与空白、小写）后与历史标题相同 → 重复；
+2. 链接归一化（去 query、尾斜杠、host 小写）后相同，且标题相似度 ≥ `0.60` → 视为同一条的措辞改写 → 重复。
+
+不单独按 URL 判重：源页面有时会把同一个栏目/首页链接挂在多条**不同**新闻上。被过滤条目的标题与链接也会登记为历史指纹，避免「改标题 + 换来源」再次漏网。过滤发生在 `/api/publish` 落库前和 `push.py` 本地归档时，只比对早于当期的历史，重发同一天结果不变。过滤后重算 `total` 与分类计数，并在当日 JSON 写入 `dedupe` 审计字段（过滤条数、标题、原因、首次发布日期）。
+
+`data/raw/*.html` 是未经改动的原始归档，「查看原始版式」仍展示完整卡片；主页时间线、搜索与分类筛选使用过滤后的结构化数据。
+
+历史回填与复核（从 raw HTML 重建，可反复执行，不会二次过滤）：
+
+```bash
+python3 dedupe.py --preview --verbose    # 只打印报告，不写盘
+python3 dedupe.py --rebuild              # 按日期正序重建 data/days/*.json 与 entries.json
+```
+
+若整期卡片全是往期重复，`/api/publish` 返回 422 并拒绝创建无内容的空期，`--rebuild` 也会跳过该期。
+
+阈值可用环境变量 `AINEWS_DEDUPE_THRESHOLD` 调整（默认 `0.60`）。
+
 ### HTTP API
 
 | 方法 | 路径 | 说明 |
@@ -72,7 +96,7 @@ AINEWS_URL=http://127.0.0.1:3000 python3 push.py file.html      # 本地联调
 | GET | `/api/feed?limit=30` | 最近 N 期完整数据，最大 365 |
 | GET | `/api/export` | 全量备份（结构化数据 + 原始 HTML） |
 | GET | `/d/<date>.html` | 当日未经改动的原始 HTML |
-| POST | `/api/publish` | 发布一期，需 `X-Publish-Token` 头，Body 为 `{"date","html"}` |
+| POST | `/api/publish` | 发布一期，需 `X-Publish-Token` 头，Body 为 `{"date","html"}`；自动过滤往期重复，返回 `total` 与 `removed` |
 
 ### 目录结构
 
@@ -80,6 +104,7 @@ AINEWS_URL=http://127.0.0.1:3000 python3 push.py file.html      # 本地联调
 .
 ├── server.py           # HTTP 服务、原子存储、发布接口
 ├── daily_parser.py     # 每日 HTML → 结构化 JSON
+├── dedupe.py           # 跨期去重与历史回填（--preview / --rebuild）
 ├── push.py             # 推送 / 拉取 / 本地归档
 ├── public/index.html   # 零依赖单页前端
 ├── data/               # 示例数据：entries.json + days/ + raw/
@@ -146,6 +171,30 @@ python3 push.py --pull
 
 `push.py` writes locally first, so a remote failure never loses history. A source page that parses to zero cards is rejected to avoid overwriting an existing issue.
 
+### Cross-issue deduplication
+
+A daily HTML page often repeats stories already carried by an earlier issue. The publish path filters them automatically, **keeping the first appearance only**.
+
+Rules (`dedupe.py`, stdlib only):
+
+1. A normalised headline (NFKC, punctuation/whitespace removed, lowercased) equal to a known headline → duplicate;
+2. A normalised URL (query, trailing slash and host case removed) equal to a known URL, with headline similarity ≥ `0.60` → a rewording of the same story → duplicate.
+
+URL equality alone is not used: source pages sometimes attach one column/home URL to several **different** stories. Aliases of filtered cards are registered as history fingerprints too, so changing both the wording and the source link cannot slip through. Filtering runs before `/api/publish` writes to disk and while `push.py` archives locally; only earlier issues are compared, so republishing the same date is stable. `total` and category counts are recomputed, and a `dedupe` audit field (removed count, headlines, reasons, first-published dates) is written into the day JSON.
+
+`data/raw/*.html` keeps the untouched archive, so "view original layout" still shows every card; the timeline, search and filters use the filtered structured data.
+
+Rebuild or audit history (re-parses from raw HTML, safe to rerun):
+
+```bash
+python3 dedupe.py --preview --verbose    # report only, no writes
+python3 dedupe.py --rebuild              # rewrite data/days/*.json and entries.json in date order
+```
+
+If every card in an issue is a duplicate, `/api/publish` returns 422 and refuses to create an empty day; `--rebuild` skips such an issue too.
+
+Override the threshold with `AINEWS_DEDUPE_THRESHOLD` (default `0.60`).
+
 ### HTTP API
 
 | Method | Path | Description |
@@ -157,7 +206,7 @@ python3 push.py --pull
 | GET | `/api/feed?limit=30` | Recent N issues, max 365 |
 | GET | `/api/export` | Full backup (structured data + raw HTML) |
 | GET | `/d/<date>.html` | Original daily HTML, unmodified |
-| POST | `/api/publish` | Publish one issue; requires `X-Publish-Token`, body `{"date","html"}` |
+| POST | `/api/publish` | Publish one issue; requires `X-Publish-Token`, body `{"date","html"}`; drops earlier-issue duplicates and returns `total` / `removed` |
 
 ### Layout
 
@@ -165,6 +214,7 @@ python3 push.py --pull
 .
 ├── server.py           # HTTP server, atomic store, publish endpoint
 ├── daily_parser.py     # Daily HTML -> structured JSON
+├── dedupe.py           # Cross-issue dedupe + history rebuild (--preview / --rebuild)
 ├── push.py             # Publish / pull / local archive
 ├── public/index.html   # Dependency-free single-page frontend
 ├── data/               # Sample data: entries.json + days/ + raw/

@@ -14,6 +14,9 @@ Routes
 Storage is plain JSON on disk. The project's data/ directory is the local
 authoritative copy; if the deploy sandbox is read-only, a writable directory
 is used and seeded from data/ at startup.
+
+Publishing drops cards already carried by an earlier issue (see dedupe.py);
+the original HTML stays untouched as the archival "original layout" page.
 """
 
 import json
@@ -26,6 +29,7 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+import dedupe
 from daily_parser import parse_daily, valid_date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -146,6 +150,20 @@ def save_day(date, source, document):
         index = {"entries": entries, "updated_at": now_iso()}
         atomic_write(INDEX_PATH, json.dumps(index, ensure_ascii=False, indent=1))
         return created, index
+
+
+def history_documents(date):
+    """Structured days published before `date`, oldest first, for dedupe."""
+    with LOCK:
+        docs = []
+        for entry in load_index()["entries"]:
+            earlier = entry.get("date", "")
+            if earlier and earlier < date and valid_date(earlier):
+                doc = read_json(day_path(earlier), None)
+                if doc:
+                    docs.append(doc)
+    docs.sort(key=lambda doc: doc.get("date", ""))
+    return docs
 
 
 def read_page():
@@ -301,20 +319,28 @@ class Handler(BaseHTTPRequestHandler):
         if document["total"] == 0:
             return self._error(422, "parsed 0 cards; refusing to overwrite an existing day")
 
+        document = dedupe.filter_document(document, history_documents(date))
+        removed = document["dedupe"]["removed"]
+        if document["total"] == 0:
+            # A day with no fresh news would show up as an empty timeline entry.
+            return self._error(422,
+                "all %d cards already published in earlier issues; refusing an empty day" % removed)
+
         try:
             created, index = save_day(date, source, document)
         except OSError as exc:
             return self._error(500, "write failed: %s" % exc)
 
-        print("[publish] %s %s cards=%d cats=%d created=%s"
+        print("[publish] %s %s cards=%d cats=%d removed=%d created=%s"
               % (date, document["title"], document["total"],
-                 document["cat_count"], created), flush=True)
+                 document["cat_count"], removed, created), flush=True)
         return self._json(200, {
             "ok": True,
             "date": date,
             "created": created,
             "title": document["title"],
             "total": document["total"],
+            "removed": removed,
             "cat_count": document["cat_count"],
             "total_days": len(index["entries"]),
             "url": "/#%s" % date,
