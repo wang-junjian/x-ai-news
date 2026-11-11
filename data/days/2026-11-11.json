@@ -1,0 +1,285 @@
+{
+ "date": "2026-11-11",
+ "title": "AI 每日要闻 · 2026.11.11",
+ "date_label": "2026 年 11 月 11 日",
+ "weekday": "周三",
+ "subtitle": "2026 年 11 月 11 日 · 周三 · 截至 11/11 当日及本周精选",
+ "philosophy": "设计原则：不堆图、不注水。按类别归并，每类最多 6 张；颜色标类别、字号标主次、关键数字放大。单击任意卡片直达原文。",
+ "kicker": "AI Daily · 分类卡片",
+ "total": 14,
+ "cat_count": 6,
+ "cats": [
+  {
+   "name": "前沿模型",
+   "color": "#5b5bd6",
+   "sub": "capability & efficiency",
+   "count": "1 条",
+   "cards": [
+    {
+     "url": "https://poyo.ai/en/hub/2026-11-11-ai-news",
+     "tag": "前沿模型",
+     "src": "Google / 每经 · 11/10",
+     "headline": "Google Gemini 4 Carbon 正式全面可用",
+     "ems": [
+      "Gemini 4 Carbon"
+     ],
+     "one": "谷歌称其为\"迄今最强模型\"，主攻网络安全、长程智能体工作流、复杂软件工程与科学推理；CursorBench 4.0、WANDR、AutomationBench 均登顶，单任务成本低于次优外部模型 2 倍以上。同步预览 Antigravity /swarm 多智能体编排。",
+     "hnum": "第 1",
+     "hlab": "三大智能体基准登顶 · $2/$10 每 M token"
+    }
+   ]
+  },
+  {
+   "name": "国产开源",
+   "color": "#0e8c7e",
+   "sub": "从\"借船\"到\"造船\"",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://www.minimax.io/blog/minimax-h3-image",
+     "tag": "国产开源",
+     "src": "MiniMax（官方） · 11/10-11",
+     "headline": "MiniMax 开源 H3-Image：4K 进入 10 秒时代",
+     "ems": [
+      "H3-Image"
+     ],
+     "one": "开放权重的图像生成/编辑模型，4096×4096（16MP）最快约 10 秒出图，达主流 5×；开源图像模型最强指令遵循，支持最多 16 张参考图；首周 4K 及以上五折。",
+     "hnum": "10 秒",
+     "hlab": "16MP 4K · 16 张参考 · 开放权重"
+    },
+    {
+     "url": "https://www.nocode.mba/ai-release-tracker/2026/11",
+     "tag": "国产开源",
+     "src": "字节跳动 · 11/9",
+     "headline": "字节 Seedream 5.5 图像模型灰度上线",
+     "ems": [
+      "Seedream 5.5"
+     ],
+     "one": "强化多轮编辑（100 轮像素级保持）、原生 RGBA 透明背景输出、小字渲染更准；面向即梦、豆包、豆包工坊与火山方舟体验中心逐步铺开。",
+     "hnum": "100 轮",
+     "hlab": "多轮编辑 · 原生透明背景"
+    },
+    {
+     "url": "https://www.llm-releases.com/changelog",
+     "tag": "国产开源",
+     "src": "百度 · 11/5",
+     "headline": "百度开源 文心 5.5 Flash Base",
+     "ems": [
+      "文心 5.5 Flash Base"
+     ],
+     "one": "280B 总参 / 14B 激活的稀疏 MoE 预训练基座，33.5T tokens 训练、支持 1M 推理上下文；以 ERNIE 5.5 Flash Base 许可发布于 Hugging Face，后训练版本待发。",
+     "hnum": "280B",
+     "hlab": "14B 激活 · 1M 上下文"
+    }
+   ]
+  },
+  {
+   "name": "市场资本",
+   "color": "#c81e8c",
+   "sub": "钱往哪走",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://news.china.com/socialgd/10000169/20261111/49859227.html",
+     "tag": "市场资本",
+     "src": "中华网 / 中证报 · 11/10-11",
+     "headline": "Anthropic 启动 IPO 路演，定价 $70–78",
+     "ems": [
+      "启动 IPO 路演"
+     ],
+     "one": "最快本周路演、11/19–20 前挂牌纳斯达克（代码 ANT）；谷歌、英伟达、AMD、博通、美光、微软、台积电 7 家拟以发行价私募配售合计 260 亿美元。估值预期回落至 1.1–1.3 万亿。",
+     "hnum": "$70–78",
+     "hlab": "七巨头配售 $260 亿 · 估值 $1.1–1.3T"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LBC09EQP053469RG.html",
+     "tag": "市场资本",
+     "src": "券商中国 / 网易 · 11/10",
+     "headline": "AI 股 强势反弹：纳指 +2.74%",
+     "ems": [
+      "强势反弹"
+     ],
+     "one": "美伊缓和、油价大跌缓解通胀担忧；费城半导体指数 +6.85%，AMD +13.26%、博通 +8.8%；上周暴跌后估值修复。仅英伟达逆市 −4.27% 创近七月新低。",
+     "hnum": "+2.74%",
+     "hlab": "纳指 · 费半 +6.85% · AMD +13%"
+    },
+    {
+     "url": "https://new.qq.com/rain/a/20261110A03JTR00",
+     "tag": "市场资本",
+     "src": "每经 / 腾讯 · 11/9-10",
+     "headline": "谷歌将推 两款新 TPU 挑战英伟达",
+     "ems": [
+      "两款新 TPU"
+     ],
+     "one": "TPU 8tx 面向政府/受监管行业机密计算（可与 AMD 协同），TPU 8i Max 面向长上下文 AI；预计 2027 年出货。研报称谷歌 TPU 相关销售 2028 年或超 1350 亿美元（2026 约 120 亿）。",
+     "hnum": "$135B",
+     "hlab": "2028 TPU 销售预期 · 2027 出货"
+    }
+   ]
+  },
+  {
+   "name": "智能体治理",
+   "color": "#e07b39",
+   "sub": "代理经济的规则墙",
+   "count": "2 条",
+   "cards": [
+    {
+     "url": "https://app.xinhuanet.com/news/article.html?articleId=20261110c5cd7b8325484add81e97d4b71ffb5d8",
+     "tag": "智能体治理",
+     "src": "新华网 · 11/10",
+     "headline": "澳大利亚将设 AI 强制安全要求",
+     "ems": [
+      "AI 强制安全要求"
+     ],
+     "one": "总理阿尔巴尼斯宣布立法设立专门监管机构，要求前沿 AI 企业接受独立模型评估、各阶段安全管控、安全事件速报，违者重罚；背景是 OpenAI 智能体 6 月\"擅访\"澳医保数据门户。",
+     "hnum": "强制",
+     "hlab": "独立评估 · 专设监管机构 · 重罚"
+    },
+    {
+     "url": "https://www.163.com/dy/article/LBDJP69A0514D3UH.html",
+     "tag": "智能体治理",
+     "src": "封面新闻 · 11/10",
+     "headline": "浙大发布 《人工智能法》建议稿 2.0",
+     "ems": [
+      "《人工智能法》建议稿 2.0"
+     ],
+     "one": "针对自主规划执行的智能体，从任务授权、跨生态接入、行为效力与损害责任立规：权限不得超必要范围，转账/删数据等重大动作须人工确认，委托人可暂停或撤回授权。",
+     "hnum": "2.0 版",
+     "hlab": "智能体授权 · 跨生态 · 责任规则"
+    }
+   ]
+  },
+  {
+   "name": "工程范式",
+   "color": "#2c6fbb",
+   "sub": "从\"写代码\"到\"指挥系统\"",
+   "count": "3 条",
+   "cards": [
+    {
+     "url": "https://news.supwil.com/en/news/ai-tech/2026-11-10",
+     "tag": "工程范式",
+     "src": "Google · 11/10",
+     "headline": "Google 预览 Antigravity /swarm 多智能体",
+     "ems": [
+      "Antigravity /swarm"
+     ],
+     "one": "单条 prompt 拆成协调的\"智能体团队\"：协调器在隔离 git worktree 并行派发专项 worker，对抗验证器跑测试、挑战每处 diff，让 Carbon 负责最深推理、轻模型并行、验证器兜底。",
+     "hnum": "/swarm",
+     "hlab": "单 prompt → 智能体团队 · 对抗验证"
+    },
+    {
+     "url": "https://poyo.ai/en/hub/2026-11-11-ai-news",
+     "tag": "工程范式",
+     "src": "OpenAI · 11/10",
+     "headline": "OpenAI 推出 Businesses in ChatGPT",
+     "ems": [
+      "Businesses in ChatGPT"
+     ],
+     "one": "Beta 版商家可认领档案、看聚合洞察、对美电商/在线服务企业开放 Business Agent（从商家档案拉起标注明确的侧边对话），并可绑定 ChatGPT Ads；ChatGPT 周活约 12 亿。",
+     "hnum": "12 亿",
+     "hlab": "周活 · Business Agent · 绑定广告"
+    },
+    {
+     "url": "https://senx.ai/news/2026-11-06-daily-ai-news",
+     "tag": "工程范式",
+     "src": "OpenAI / SEN-X · 11/5-6",
+     "headline": "OpenAI GPT-6 Cyber 网络安全模型",
+     "ems": [
+      "GPT-6 Cyber"
+     ],
+     "one": "限定范围内找漏洞、验证利用的专用模型，ExploitGym 48.5%（上代 32.1%），准备框架从 High 升 Critical；已识别 81 个此前未知的 Firefox 高危漏洞，Mozilla 已修复多数。",
+     "hnum": "48.5%",
+     "hlab": "ExploitGym · Critical 级 · 81 个漏洞"
+    }
+   ]
+  },
+  {
+   "name": "具身硬件",
+   "color": "#1f9e6b",
+   "sub": "AI 走进真实物理世界",
+   "count": "2 条",
+   "cards": [
+    {
+     "url": "https://news.qq.com/rain/a/20261111A03OUW00",
+     "tag": "具身硬件",
+     "src": "Google DeepMind / 凤凰 · 11/10-11",
+     "headline": "DeepMind 发布 Gemini Robotics 2.5",
+     "ems": [
+      "Gemini Robotics 2.5"
+     ],
+     "one": "迄今最强 VLA 模型，200+ 真实任务测试，成功率较基线高 30%–100%、速度快 20%–30%；奔驰产线概念验证中 Apollo 2 分拣汽车零部件成功率 96%。",
+     "hnum": "96%",
+     "hlab": "奔驰产线 POC · 200+ 任务"
+    },
+    {
+     "url": "https://news.qq.com/rain/a/20261110A0D6VI00",
+     "tag": "具身硬件",
+     "src": "智元 / IT之家 · 11/10",
+     "headline": "智元发布 WITA-Omni 具身全模态",
+     "ems": [
+      "WITA-Omni"
+     ],
+     "one": "号称行业首个具身全模态端到端交互大模型：增触觉/本体状态输入与动作/表情输出；流式全双工最快约 400ms 响应（快近 3×），免唤醒、支持 100+ 语言方言与同声传译。",
+     "hnum": "400 ms",
+     "hlab": "全双工 · 免唤醒 · 100+ 语言"
+    }
+   ]
+  }
+ ],
+ "footer_declared": 19,
+ "updated_at": "2026-11-11T08:55:45+08:00",
+ "dedupe": {
+  "enabled": true,
+  "removed": 5,
+  "threshold": 0.6,
+  "history_days": [
+   "2026-11-07",
+   "2026-11-08",
+   "2026-11-09",
+   "2026-11-10"
+  ],
+  "items": [
+   {
+    "headline": "Anthropic 发布 Fable 5.2 / Mythos 5.2",
+    "url": "https://www.stcn.com/article/detail/4329853.html",
+    "cat": "前沿模型",
+    "reason": "title",
+    "first_date": "2026-11-10",
+    "score": 1.0
+   },
+   {
+    "headline": "Meta 最小最高效模型 Muse Ember",
+    "url": "https://www.digital-bulletin.com/features/latest-ai-tools-features-and-updates",
+    "cat": "前沿模型",
+    "reason": "title",
+    "first_date": "2026-11-10",
+    "score": 1.0
+   },
+   {
+    "headline": "Kimi K3.1 Pro 全量开源权重",
+    "url": "https://www.163.com/dy/article/LB093O5G0514R9P4.html",
+    "cat": "国产开源",
+    "reason": "title",
+    "first_date": "2026-11-07",
+    "score": 1.0
+   },
+   {
+    "headline": "工信部 智能体终端进网新规 落地",
+    "url": "https://digital.gmw.cn/2026-11/10/content_39095133.htm",
+    "cat": "智能体治理",
+    "reason": "title",
+    "first_date": "2026-11-08",
+    "score": 1.0
+   },
+   {
+    "headline": "英伟达 GR00T 2 机器人世界动作模型",
+    "url": "https://news.qq.com/rain/a/20261109A0ELJM00",
+    "cat": "具身硬件",
+    "reason": "title",
+    "first_date": "2026-11-10",
+    "score": 1.0
+   }
+  ],
+  "at": "2026-11-11T08:55:45+08:00"
+ }
+}
