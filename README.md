@@ -61,6 +61,18 @@ AINEWS_URL=http://127.0.0.1:3000 python3 push.py file.html      # 本地联调
 
 `push.py` 先写本地再推线上：即使线上失败，本地历史仍完整，重新部署即可恢复。解析到 0 张卡片时会拒绝写入，避免覆盖已有数据。
 
+### 留档约定
+
+每期发布走完三步，缺一不可：
+
+1. **本地归档** —— `push.py` 自动写 `data/days/<date>.json` 与 `data/raw/<date>.html`；
+2. **线上发布** —— `push.py` 自动 `POST /api/publish`；
+3. **仓库提交** —— `git add data/ && git commit && git push`，在发布成功后立即执行。
+
+第 3 步不是可选项。`server.py` 默认把项目内 `data/` 当作线上数据目录，**重新发布等于把仓库的 `data/` 推到线上**；仓库一旦落后于线上，下次发布就会用旧数据覆盖线上新期。这是本项目唯一会真正丢数据的路径。
+
+单期体积约 27 KB（原始 HTML 18 KB + 结构化 JSON 9 KB），按日更计算一年约 10 MB，无需担心仓库膨胀。
+
 ### 跨期去重
 
 每日 HTML 常会带上往期已经发布过的新闻。发布链路会自动过滤，**只保留首次发布的那一条**。
@@ -170,6 +182,18 @@ python3 push.py --pull
 ```
 
 `push.py` writes locally first, so a remote failure never loses history. A source page that parses to zero cards is rejected to avoid overwriting an existing issue.
+
+### Archiving policy
+
+Every issue goes through three steps, and none of them is optional:
+
+1. **Local archive** — `push.py` writes `data/days/<date>.json` and `data/raw/<date>.html`;
+2. **Remote publish** — `push.py` calls `POST /api/publish`;
+3. **Repository commit** — `git add data/ && git commit && git push`, right after a successful publish.
+
+Step 3 is not cosmetic. `server.py` treats the project's `data/` as the remote data directory, so **republishing ships whatever `data/` the repository holds**. A repository behind the live site means the next publish overwrites the newest issues with stale data — the only path in this project that can actually lose history.
+
+One issue is roughly 27 KB (18 KB raw HTML + 9 KB structured JSON), so a year of daily issues is about 10 MB.
 
 ### Cross-issue deduplication
 
