@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 新闻时间线 · 每日要闻</title>
+<title>AI 每日要闻</title>
 <meta name="description" content="每日 AI 要闻，按时间线连续呈现，支持搜索与分类筛选。">
 <style>
   :root{
@@ -20,7 +20,6 @@
   .top-in{max-width:1180px;margin:0 auto;padding:16px 22px 13px}
   .brandline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
   .brand{font-size:21px;font-weight:900;letter-spacing:-.6px}
-  .brand .slash{color:var(--muted);font-weight:400;margin:0 8px}
   .kicker{font-size:11px;font-weight:800;letter-spacing:2.4px;color:var(--muted);text-transform:uppercase}
   .stats{margin-left:auto;font-size:12px;color:var(--sub);font-weight:600;white-space:nowrap}
   .stats b{color:var(--ink);font-size:14px}
@@ -102,8 +101,8 @@
 <header class="top">
   <div class="top-in">
     <div class="brandline">
-      <span class="brand">AI 新闻时间线<span class="slash">/</span><span style="font-weight:500;color:var(--sub)">每日要闻</span></span>
-      <span class="kicker">AI Daily · Timeline</span>
+      <span class="brand">AI 每日要闻</span>
+      <span class="kicker">AI Daily Brief</span>
       <span class="stats" id="stats">加载中…</span>
     </div>
     <div class="controls">
@@ -121,7 +120,7 @@
   <div id="content"><div class="state">正在加载时间线…</div></div>
   <button class="more" id="more" hidden>加载更早的新闻</button>
   <footer>
-    每日 8:45 自动生成 · 按日期倒序连续呈现 · 单击卡片直达原文<br>
+    每日 8:45 由 WorkBuddy 自动生成 · 按日期倒序连续呈现 · 单击卡片直达原文<br>
     数据来源于公开报道，仅作速读整理
   </footer>
 </main>
